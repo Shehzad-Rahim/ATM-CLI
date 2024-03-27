@@ -1,6 +1,6 @@
 {
   "name": "srb-33-atm-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This is a CLI based ATM program",
   "main": "index.js",
   "type": "module",

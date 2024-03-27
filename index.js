@@ -29,7 +29,7 @@ const answer = await inquirer.prompt([
     {
         type: "list",
         name: "amount",
-        choices: [1000, 2000, 10000, 20000],
+        choices: [1000, 5000, 10000, 15000, 20000, 25000],
         message: "Select your Amount",
         when(answers) {
             return answers.transactionType == "Fast Cash";
