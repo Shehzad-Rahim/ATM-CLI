@@ -51,15 +51,15 @@ if (answer.userId && answer.userPin) {
     const enteredAmount = answer.amount;
     if (balance >= enteredAmount) {
         const remaining = balance - enteredAmount;
-        if (answer.transactionType == "Fast Cash") {
-            console.log("You have withdraw", answer.amount);
+        if (answer.transactionType === "Fast Cash") {
+            console.log("You have withdraw", enteredAmount, "using Fast Cash");
         }
-        else if (answer.transactionType == "Withdraw") {
-            console.log("You have withdraw", answer.amount);
+        else if (answer.transactionType === "Withdraw") {
+            console.log("You have withdraw", enteredAmount, "using Withdraw");
         }
         console.log("Your remaining balance is ", remaining);
     }
     else {
-        console.log("Insuficient Balance");
+        console.log("You have Insuficient Balance");
     }
 }

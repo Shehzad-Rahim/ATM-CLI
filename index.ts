@@ -57,22 +57,30 @@ const answer: ansType = await inquirer.prompt([
 
 // console.log(answer);
 if(answer.userId && answer.userPin){
+
     const balance = Math.floor(Math.random()* 1000000);
+
     console.log("Your previous balance is",balance);
+
     const enteredAmount = answer.amount;
+
     if(balance >= enteredAmount){
+
        const remaining = balance - enteredAmount;
-       if(answer.transactionType == "Fast Cash"){
-        console.log("You have withdraw", answer.amount);
+
+       if(answer.transactionType === "Fast Cash"){
+
+        console.log("You have withdraw", enteredAmount , "using Fast Cash");
         
-       }else if(answer.transactionType == "Withdraw"){
-        console.log("You have withdraw", answer.amount);
+       }else if(answer.transactionType === "Withdraw"){
+
+        console.log("You have withdraw", enteredAmount, "using Withdraw");
         
        }
        console.log("Your remaining balance is ", remaining);
        
     }else{
-        console.log("Insuficient Balance");
+        console.log("You have Insuficient Balance");
         
     }
     
